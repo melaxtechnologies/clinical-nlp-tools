@@ -23,9 +23,7 @@ public class DemoPipeline {
     for( DocProcessor proc : pipeline ) {
       proc.process( doc );
     }
-    
-    
-    
+   
     doc.save( "1041.xmi" );
     return;
   }
