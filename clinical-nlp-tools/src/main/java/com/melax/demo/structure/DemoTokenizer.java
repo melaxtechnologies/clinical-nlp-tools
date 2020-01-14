@@ -1,4 +1,4 @@
-package com.melax.demo.support;
+package com.melax.demo.structure;
 
 import java.io.File;
 import java.io.FileWriter;
