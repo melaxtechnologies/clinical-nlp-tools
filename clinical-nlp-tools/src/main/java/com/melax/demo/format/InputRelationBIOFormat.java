@@ -163,13 +163,13 @@ public class InputRelationBIOFormat extends InputFormat {
   
   
   public static void main( String[] argv ) {
+	  
 	// Example of converting the relation BIO file to the clamp document
-	  	  
 	  File indir = new File( "input/" );
       File outdir = new File( "output/" );
-	      
+      
       InputRelationBIOFormat ibo=new InputRelationBIOFormat();
-          
+      
       for( File file : indir.listFiles() ) {
           if( file.getName().startsWith( "." ) ) {
             continue;
@@ -178,7 +178,8 @@ public class InputRelationBIOFormat extends InputFormat {
       File biofile = new File(indir + "/" + file);	    	
       Document doc=ibo.parseBIOFile(biofile);
       doc.save(outdir+ "/" + file.getName().replace(".bio", ".xmi"));
-        
+            
+      
       }
 	  
   }
