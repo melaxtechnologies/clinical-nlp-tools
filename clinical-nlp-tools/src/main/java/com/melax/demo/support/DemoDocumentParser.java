@@ -1,4 +1,4 @@
-package com.melax.demo.parser;
+package com.melax.demo.support;
 
 import java.io.IOException;
 
