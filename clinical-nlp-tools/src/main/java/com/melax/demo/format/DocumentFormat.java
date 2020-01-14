@@ -462,22 +462,24 @@ public class DocumentFormat extends InputFormat {
   }
   
   public static void main(String[] argv) throws UIMAException, IOException {
-  
-	//Example of using getRelationBIOString to convert in xmi file to relation BIO file 
 	  
-    File infile = new File("train.xmi");
-    File outfile = new File("train.txt");
-    // Specify the Primary semantictype in relations e.g. "problem", "drug", "test"
-    String primarySemantic = "problem";
+	//Example of using getRelationBIOString to convert in xmi file to relation BIO file
+	  
+	  File infile = new File("train.xmi");
+	  File outfile = new File("train.txt");
+	  
+	// Specify the Primary semantictype in relations e.g. "problem", "drug", "test"
+	  String primarySemantic = "problem";
 
-    BufferedWriter writer = new BufferedWriter(new FileWriter(outfile));
-	String result = new String();
-											
-	DocumentFormat docformat = new DocumentFormat(new Document( infile ));	
-	result = docformat.getRelationBIOString(primarySemantic);		
-	System.out.println(result);			
-	writer.write(result + "\n");	
-	writer.close();
-	
-  }
+	  BufferedWriter writer = new BufferedWriter(new FileWriter(outfile));
+	  String result = new String();
+												
+	  DocumentFormat docformat = new DocumentFormat(new Document( infile ));	
+	  result = docformat.getRelationBIOString(primarySemantic);		
+	  System.out.println(result);			
+	  writer.write(result + "\n");	
+	  writer.close();
+		
+	 } 
+    
 }

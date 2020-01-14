@@ -151,25 +151,21 @@ public class InputEntityBIOFormat extends InputFormat {
   }
   
   public static void main( String[] argv ) throws UIMAException, IOException, DocumentIOException {
-
-	  	//Example of converting the BIO file to the clamp document
+	//Example of converting the BIO file to the clamp document
 	  
-	    File indir = new File( "bio/" );
-	    File outdir = new File( "clampoutput/" );
-	    InputEntityBIOFormat ibo=new InputEntityBIOFormat();
-	    
-	    for( File file : indir.listFiles() ) {
-	    	if (file.getName().startsWith(".")) {
+	  File indir = new File( "bio/" );
+	  File outdir = new File( "clampoutput/" );
+	  InputEntityBIOFormat ibo=new InputEntityBIOFormat();
+	  
+	  for( File file : indir.listFiles() ) {
+		  if (file.getName().startsWith(".")) {
 	    		continue;
-	    	}  	
-	    	
-    	File biofile = new File(indir + "/" + file);	    	
-	    Document doc=ibo.parseBIOFile(biofile);
-	    doc.save(outdir+ "/" + biofile.getName().replace(".bio", ".xmi"));
-		    
-	    }
-	    
-	    
+	    	} 
+		  File biofile = new File(indir + "/" + file);	    	
+		  Document doc=ibo.parseBIOFile(biofile);
+		  doc.save(outdir+ "/" + biofile.getName().replace(".bio", ".xmi"));
+			    
+	  	}    
 	    
 	  }
 
