@@ -163,10 +163,9 @@ public class InputRelationBIOFormat extends InputFormat {
   
   
   public static void main( String[] argv ) {
-	  
 	//Example of converting the relation BIO file to the clamp document
 	  File indir = new File( "input/" );
-      File outdir = new File( "output/" );
+	  File outdir = new File( "output/" ); 
       
       InputRelationBIOFormat ibo=new InputRelationBIOFormat();
       
